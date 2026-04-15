@@ -75,33 +75,66 @@
     <h4>1.Uzdevums:</h4>
     <?php
 
-        
+        $a = array(7,8,9,10,11,12,13,14,15);
+
+        echo $a[7];
 
     ?>
 
     <h4>2.Uzdevums:</h4>
     <?php
     
+        $b = array("viens" => 1, "divi" => 2, "trīs" => 3, "četri" => 4, "pieci" => 5);
+
+            echo $b["trīs"];
+
     ?>
 
     <h4>3.Uzdevums:</h4>
     <?php
-    
+        $skaitli = [1, 2, 3, 4, 5, 6];
+        $skaitli [] = 7;
+        echo $skaitli[6];
+
     ?>
 
     <h4>4.Uzdevums:</h4>
     <?php
-    
+        $divdimensiju[1][] = "viens";
+        $divdimensiju[1][] = "divi";
+        $divdimensiju[1][] = "trīs";
+        $divdimensiju[2][] = "četri";
+        $divdimensiju[2][] = "pieci";
+        $divdimensiju[2][] = "seši";
+
+        echo $divdimensiju[1][2]."<br>";
+        echo $divdimensiju[2][1];
+
+
     ?>
 
     <h4>5.Uzdevums:</h4>
     <?php
-    
+
+    $augusts = array();
+
+    for($i=0;$i<=10;$i++){
+        $augusts[$i] = rand(15, 30);
+    }
+    foreach($augusts as $value){
+        
+        echo "<p>".$value."</p>";
+    }
+
+
+        
     ?>
 
     <h4>6.Uzdevums:</h4>
     <?php
     
+        
+
     ?>
 
     <h4>7.Uzdevums:</h4>
