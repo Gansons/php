@@ -135,10 +135,23 @@
 
     <h4>6.Uzdevums:</h4>
     <?php
-    
+    $draugi = array(
+    array("vards"=>"Ansis","vecums"=>26),
+    array("vards"=>"Aldis","vecums"=>19),
+    array("vards"=>"Miks","vecums"=>23),
+    array("vards"=>"Viktors","vecums"=>17),
+    array("vards"=>"Juris","vecums"=>18),
+    array("vards"=>"Jānis","vecums"=>22),
+    );
 
+    usort($draugi, function($a, $b) {
+    return $b['vecums'] - $a['vecums'];
+    });
 
-    ?>
+    foreach($draugi as $draugs){
+    echo $draugs['vards']." ir ".$draugs['vecums']." gadus vecs.<br>";
+    }
+?>
 
     <h4>7.Uzdevums:</h4>
     <?php
