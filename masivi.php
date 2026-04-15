@@ -121,6 +121,9 @@
     for($i=0;$i<=10;$i++){
         $augusts[$i] = rand(15, 30);
     }
+
+    rsort($augusts);
+
     foreach($augusts as $value){
         
         echo "<p>".$value."</p>";
@@ -133,7 +136,7 @@
     <h4>6.Uzdevums:</h4>
     <?php
     
-        
+
 
     ?>
 
