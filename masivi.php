@@ -136,27 +136,74 @@
     <h4>6.Uzdevums:</h4>
     <?php
     $draugi = array(
-    array("vards"=>"Ansis","vecums"=>26),
-    array("vards"=>"Aldis","vecums"=>19),
-    array("vards"=>"Miks","vecums"=>23),
-    array("vards"=>"Viktors","vecums"=>17),
-    array("vards"=>"Juris","vecums"=>18),
-    array("vards"=>"Jānis","vecums"=>22),
+        "Ansis" => 26,
+        "Aldis" => 19,
+        "Miks" => 23,
+        "Viktors" => 17,
+        "Juris" => 18,
+        "Jānis" => 22
     );
 
-    usort($draugi, function($a, $b) {
-    return $b['vecums'] - $a['vecums'];
-    });
+    arsort($draugi);
 
-    foreach($draugi as $draugs){
-    echo $draugs['vards']." ir ".$draugs['vecums']." gadus vecs.<br>";
+    foreach($draugi as $vards => $vecums){
+        echo $vards." ir ".$vecums." gadus vecs.<br>";
     }
 ?>
 
     <h4>7.Uzdevums:</h4>
     <?php
-    
-    ?>
+$apskates_objekti = array(
+    array(
+        "nosaukums" => "Brauciens ar gaisa vagoninu",
+        "vieta" => "Sigulda",
+        "apraksts" => "Apraksts par konkrēto apskates vietu.",
+        "bilde" => "assets/sigulda.jpg",
+        "url" => "https://tourism.sigulda.lv/objects/gaisa-trosu-cels-vagonins/"
+    ),
+    array(
+        "nosaukums" => "Radioastronomijas centrs Irbenē",
+        "vieta" => "Ventspils nov.",
+        "apraksts" => "Apraksts par konkrēto apskates vietu.",
+        "bilde" => "assets/irbene.jpg",
+        "url" => "https://www.latvia.travel/lv/apskates-vieta/ventspils-starptautiskais-radioastronomijas-centrs"
+    ),
+    array(
+        "nosaukums" => "Ziemeļu forti",
+        "vieta" => "Liepāja",
+        "apraksts" => "Apraksts par konkrēto apskates vietu.",
+        "bilde" => "assets/ziemelu_forti.jpg",
+        "url" => "https://liepaja.travel/darit-un-redzet/ziemelu-forti/"
+    ),
+    array(
+        "nosaukums" => "Valpenes piramīda",
+        "vieta" => "Dundagas nov.",
+        "apraksts" => "Apraksts par konkrēto apskates vietu.",
+        "bilde" => "assets/valpene.jpg",
+        "url" => "https://visittalsi.com/kurp-doties/dundaga/valpenes-piramida/"
+    ),
+);
+
+echo "<div style='display:flex; gap:1rem; flex-wrap:wrap;'>";
+foreach($apskates_objekti as $objekts){
+    echo "
+    <div class='box' style='width:16rem; padding:0; overflow:hidden; text-align:left; border-radius:1rem;'>
+        <div style='position:relative;'>
+            <img src='".$objekts['bilde']."' alt='".$objekts['nosaukums']."' style='width:100%; height:12rem; object-fit:cover; display:block;'>
+            <span style='position:absolute; top:.6rem; left:.6rem; background:#ffffffcc; border-radius:.4rem; padding:.2rem .6rem; font-size:.9rem; display:flex; align-items:center; gap:.3rem;'>
+                <span style='color:#e07b00;'>&#x2316;</span> ".$objekts['vieta']."
+            </span>
+        </div>
+        <div style='padding:.8rem;'>
+            <strong>".$objekts['nosaukums']."</strong>
+            <p style='font-size:.9rem; color:#555; margin:.4rem 0 .8rem;'>".$objekts['apraksts']."</p>
+            <a href='".$objekts['url']."' target='_blank' style='display:block; background:#e07b00; color:#fff; text-align:center; padding:.5rem; border-radius:.5rem; font-size:.95rem;'>Uzzināt vairāk</a>
+        </div>
+    </div>
+    ";
+}
+echo "</div>";
+?>
 
 
 </main>
