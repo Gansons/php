@@ -197,7 +197,6 @@ foreach($apskates_objekti as $objekts){
         <div style='padding:.8rem;'>
             <strong>".$objekts['nosaukums']."</strong>
             <p style='font-size:.9rem; color:#555; margin:.4rem 0 .8rem;'>".$objekts['apraksts']."</p>
-            <a href='".$objekts['url']."' target='_blank' style='display:block; background:#e07b00; color:#fff; text-align:center; padding:.5rem; border-radius:.5rem; font-size:.95rem;'>Uzzināt vairāk</a>
         </div>
     </div>
     ";
