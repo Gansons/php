@@ -56,6 +56,29 @@
     ?>
     </form>
     
-    
+    <h3>Funkcija, Uzmini skaitli no 1 līdz 10</h3>
+    <form method="POST">
+        <?php
+            function guess_numb($masivs){
 
+                $minejums = rand(1,10);
+
+                if($masivs == $minejums){
+                    echo "<p>Skaitlis tika pareizi uzminēts! :O</p>";
+                }else{
+                    echo "<p> Nepareizi skaitlis bija <b>$minejums</b> </p>";
+                }
+            }
+        ?>
+        <input type="text" name="skaitils">
+        <button type="submit" name="minet">Minēt</button>
+    <?php
+
+         if(isset($_POST["minet"])){
+            $skaitlis = $_POST["skaitils"];
+        }
+        guess_numb($skaitlis);
+     
+    ?>
+    </form>
 </main>
