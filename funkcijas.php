@@ -85,7 +85,7 @@ if(isset($_POST["minet"])){
     $max = $_POST["max"];
     $skaitlis = $_POST["skaitlis"];
 
-    // Validācija
+
     if($min > $max){
         echo "<p>Minimālais skaitlis nevar būt lielāks par maksimālo!</p>";
     } elseif(!is_numeric($skaitlis)){
@@ -109,7 +109,7 @@ if(isset($_POST["minet"])){
 
 <?php
 function parbaudit_paroli($p1, $p2){
-    if($p1 === $p2){
+    if($p1 == $p2){
         echo "<p>Paroles sakrīt!</p>";
     } else {
         echo "<p>Paroles nesakrīt!</p>";
