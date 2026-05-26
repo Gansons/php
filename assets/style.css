@@ -188,9 +188,32 @@ table .black{
     border-radius: .5rem;
     text-align: center;
     z-index: 1;
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 100%;
+    }
+
+    80%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+        display: none;
+    }
 }
 
 /* Login daļa: */
+
+.login--unhidden {
+  display: block;
+}
+.login--hidden {
+  display: none;
+}
 
 .container{
     position: fixed;
@@ -201,7 +224,7 @@ table .black{
     background: #e5edf3aa;
 }
 
-.login{
+.login , .login--hidden , .login--unhidden{
     width: 38rem;
     margin: 0 1rem;
     background: #e5edf3;
@@ -285,7 +308,7 @@ table .black{
     font-weight: 600;
 }
 
-.login .register a:hover{
+.login  .register a:hover{
     text-decoration: underline;
 }
 
